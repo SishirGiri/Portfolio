@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sishir Giri — Developer & AI Enthusiast</title>
+  <meta name="description" content="Personal portfolio of Sishir Giri – Aspiring Developer and AI Enthusiast from Nepal." />
+
+  <!-- Google Fonts: Orbitron (display/headings) + Outfit (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Three.js via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ══════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">[</span>SG<span class="logo-bracket">]</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"    class="nav-link" data-section="about">About</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#skills"   class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#contact"  class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO SECTION
+  ══════════════════════════════════════ -->
+  <section id="hero" class="hero">
+    <!-- Three.js canvas fills this section -->
+    <canvas id="heroCanvas"></canvas>
+
+    <!-- Scanline overlay for CRT effect -->
+    <div class="scanlines"></div>
+
+    <div class="hero-content">
+      <!-- Glitch badge -->
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+
+      <p class="hero-pre">Hello, World. I'm</p>
+
+      <!-- Glitch name -->
+      <h1 class="hero-name" data-text="Sishir Giri">Sishir Giri</h1>
+
+      <p class="hero-tagline">
+        <span class="type-cursor" id="typeTarget"></span>
+      </p>
+
+      <p class="hero-sub">
+        Building intelligent systems from the foothills of Nepal.
+        Turning curiosity into code, one commit at a time.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          <span class="btn-text">View My Work</span>
+          <span class="btn-glow"></span>
+        </a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+
+      <!-- Floating stats -->
+      <div class="hero-stats">
+        <div class="stat-pill">
+          <span class="stat-value">5+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-pill">
+          <span class="stat-value">3+</span>
+          <span class="stat-label">Languages</span>
+        </div>
+        <div class="stat-pill">
+          <span class="stat-value">∞</span>
+          <span class="stat-label">Curiosity</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       ABOUT SECTION
+  ══════════════════════════════════════ -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-number">01</span>
+        <h2 class="section-title">About <em>Me</em></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+
+        <!-- Visual side -->
+        <div class="about-visual reveal-left">
+          <div class="avatar-frame">
+            <div class="avatar-inner">
+              <!-- Initials placeholder -->
+              <div class="avatar-initials">SG</div>
+              <!-- Orbiting ring -->
+              <div class="orbit-ring ring-1"></div>
+              <div class="orbit-ring ring-2"></div>
+              <!-- Corner accents -->
+              <div class="frame-corner c-tl"></div>
+              <div class="frame-corner c-tr"></div>
+              <div class="frame-corner c-bl"></div>
+              <div class="frame-corner c-br"></div>
+            </div>
+            <div class="avatar-glow"></div>
+          </div>
+
+          <!-- Info cards floating around avatar -->
+          <div class="info-card card-location">
+            <span>📍</span> Pokhara, Nepal
+          </div>
+          <div class="info-card card-status">
+            <span class="pulse-dot"></span> Learning &amp; Building
+          </div>
+        </div>
+
+        <!-- Text side -->
+        <div class="about-text reveal-right">
+          <h3 class="about-headline">
+            Turning <span class="neon-text">curiosity</span> into<br />
+            real-world solutions.
+          </h3>
+
+          <p>
+            I'm a passionate student from <strong>Nepal</strong>, on a mission to master
+            programming and artificial intelligence. What started as a question —
+            <em>"how do machines think?"</em> — turned into a deep obsession with code,
+            algorithms, and the limitless potential of AI.
+          </p>
+          <p>
+            I work primarily with <strong>C, JavaScript, HTML/CSS</strong>, and I'm actively
+            expanding into <strong>Python and machine learning</strong>. I believe the best
+            way to learn is to build — so every concept I study becomes a project.
+          </p>
+          <p>
+            Outside of coding, I explore Kathmandu's tech community, contribute to
+            open-source, and dream of building AI tools that solve real problems for
+            people in South Asia and beyond.
+          </p>
+
+          <div class="about-tags">
+            <span class="tag"># Open Source</span>
+            <span class="tag"># AI Research</span>
+            <span class="tag"># Problem Solver</span>
+            <span class="tag"># Nepal Tech</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       PROJECTS SECTION
+  ══════════════════════════════════════ -->
+  <section id="projects" class="section projects">
+    <!-- Subtle Three.js background canvas -->
+    <canvas id="projectsBg"></canvas>
+
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-number">02</span>
+        <h2 class="section-title">Featured <em>Projects</em></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project Card 1 -->
+        <article class="project-card reveal-up" style="--i:0">
+          <div class="card-glow-border"></div>
+          <div class="card-header">
+            <div class="card-icon-wrap p1">🤖</div>
+            <div class="card-links">
+              <a href="#" class="icon-btn" title="View Demo" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+              <a href="#" class="icon-btn" title="GitHub" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span>Python</span><span>NLP</span><span>AI</span>
+            </div>
+            <h3>AI Chatbot</h3>
+            <p>A rule-based intelligent chatbot using Python and pattern-matching NLP. Answers FAQs with contextual responses and learns from conversation history.</p>
+          </div>
+          <div class="card-footer">
+            <div class="card-tech">Python · NLTK · JSON</div>
+            <a href="#" class="card-cta">Explore →</a>
+          </div>
+        </article>
+
+        <!-- Project Card 2 -->
+        <article class="project-card reveal-up" style="--i:1">
+          <div class="card-glow-border"></div>
+          <div class="card-header">
+            <div class="card-icon-wrap p2">📊</div>
+            <div class="card-links">
+              <a href="#" class="icon-btn" title="View Demo" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+              <a href="#" class="icon-btn" title="GitHub" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span>JavaScript</span><span>SVG</span><span>API</span>
+            </div>
+            <h3>Live Data Dashboard</h3>
+            <p>Interactive analytics dashboard built with vanilla JS. Features real-time SVG charts, filterable datasets, and a responsive dark-mode UI.</p>
+          </div>
+          <div class="card-footer">
+            <div class="card-tech">JS · SVG · REST API</div>
+            <a href="#" class="card-cta">Explore →</a>
+          </div>
+        </article>
+
+        <!-- Project Card 3 -->
+        <article class="project-card reveal-up" style="--i:2">
+          <div class="card-glow-border"></div>
+          <div class="card-header">
+            <div class="card-icon-wrap p3">🎮</div>
+            <div class="card-links">
+              <a href="#" class="icon-btn" title="View Demo" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+              <a href="#" class="icon-btn" title="GitHub" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span>C</span><span>Terminal</span><span>Algorithms</span>
+            </div>
+            <h3>Terminal RPG Game</h3>
+            <p>A text-based adventure game written in pure C. Features dynamic story branching, inventory management, and procedural dungeon generation.</p>
+          </div>
+          <div class="card-footer">
+            <div class="card-tech">C · GCC · ncurses</div>
+            <a href="#" class="card-cta">Explore →</a>
+          </div>
+        </article>
+
+        <!-- Project Card 4 -->
+        <article class="project-card reveal-up" style="--i:3">
+          <div class="card-glow-border"></div>
+          <div class="card-header">
+            <div class="card-icon-wrap p4">🧠</div>
+            <div class="card-links">
+              <a href="#" class="icon-btn" title="View Demo" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+              <a href="#" class="icon-btn" title="GitHub" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span>Python</span><span>ML</span><span>TensorFlow</span>
+            </div>
+            <h3>Digit Classifier</h3>
+            <p>Neural network trained on MNIST that classifies handwritten digits. Includes a canvas for real-time drawing and instant predictions.</p>
+          </div>
+          <div class="card-footer">
+            <div class="card-tech">Python · TensorFlow · Canvas</div>
+            <a href="#" class="card-cta">Explore →</a>
+          </div>
+        </article>
+
+        <!-- Project Card 5 -->
+        <article class="project-card reveal-up" style="--i:4">
+          <div class="card-glow-border"></div>
+          <div class="card-header">
+            <div class="card-icon-wrap p5">📝</div>
+            <div class="card-links">
+              <a href="#" class="icon-btn" title="View Demo" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+              <a href="#" class="icon-btn" title="GitHub" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span>JavaScript</span><span>LocalStorage</span><span>CSS</span>
+            </div>
+            <h3>Smart Task Manager</h3>
+            <p>Drag-and-drop task app with priority tagging, deadline tracking, and persistent local storage. Zero dependencies, pure web APIs.</p>
+          </div>
+          <div class="card-footer">
+            <div class="card-tech">JS · CSS Grid · Web APIs</div>
+            <a href="#" class="card-cta">Explore →</a>
+          </div>
+        </article>
+
+        <!-- Project Card 6 -->
+        <article class="project-card reveal-up" style="--i:5">
+          <div class="card-glow-border"></div>
+          <div class="card-header">
+            <div class="card-icon-wrap p6">🌐</div>
+            <div class="card-links">
+              <a href="#" class="icon-btn" title="View Demo" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+              <a href="#" class="icon-btn" title="GitHub" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span>Three.js</span><span>WebGL</span><span>HTML</span>
+            </div>
+            <h3>3D Portfolio Site</h3>
+            <p>This very website — built from scratch with Three.js particle systems, WebGL shaders, scroll animations, and a custom dark futuristic UI.</p>
+          </div>
+          <div class="card-footer">
+            <div class="card-tech">Three.js · GLSL · CSS</div>
+            <a href="#" class="card-cta">Explore →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SKILLS SECTION
+  ══════════════════════════════════════ -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-number">03</span>
+        <h2 class="section-title">My <em>Toolkit</em></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-layout">
+
+        <!-- Progress Bars -->
+        <div class="skills-bars reveal-left">
+          <h3 class="skills-subtitle">Proficiency Levels</h3>
+
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">HTML &amp; CSS</span>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-w="85">
+                <div class="skill-shine"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">JavaScript</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-w="75">
+                <div class="skill-shine"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">C Programming</span>
+              <span class="skill-pct">70%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-w="70">
+                <div class="skill-shine"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">Python</span>
+              <span class="skill-pct">65%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-w="65">
+                <div class="skill-shine"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">AI / Machine Learning</span>
+              <span class="skill-pct">50%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-w="50">
+                <div class="skill-shine"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-info">
+              <span class="skill-name">Git &amp; Version Control</span>
+              <span class="skill-pct">72%</span>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-w="72">
+                <div class="skill-shine"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hexagonal badge grid -->
+        <div class="skills-hex reveal-right">
+          <h3 class="skills-subtitle">Technologies</h3>
+          <div class="hex-grid">
+            <div class="hex-badge hb-c">
+              <div class="hex-inner">
+                <span class="hex-icon">C</span>
+                <span class="hex-label">C Lang</span>
+              </div>
+            </div>
+            <div class="hex-badge hb-js">
+              <div class="hex-inner">
+                <span class="hex-icon">JS</span>
+                <span class="hex-label">JavaScript</span>
+              </div>
+            </div>
+            <div class="hex-badge hb-html">
+              <div class="hex-inner">
+                <span class="hex-icon">&lt;/&gt;</span>
+                <span class="hex-label">HTML</span>
+              </div>
+            </div>
+            <div class="hex-badge hb-css">
+              <div class="hex-inner">
+                <span class="hex-icon">#</span>
+                <span class="hex-label">CSS</span>
+              </div>
+            </div>
+            <div class="hex-badge hb-py">
+              <div class="hex-inner">
+                <span class="hex-icon">Py</span>
+                <span class="hex-label">Python</span>
+              </div>
+            </div>
+            <div class="hex-badge hb-ai">
+              <div class="hex-inner">
+                <span class="hex-icon">🤖</span>
+                <span class="hex-label">AI / ML</span>
+              </div>
+            </div>
+            <div class="hex-badge hb-git">
+              <div class="hex-inner">
+                <span class="hex-icon">⎇</span>
+                <span class="hex-label">Git</span>
+              </div>
+            </div>
+            <div class="hex-badge hb-3js">
+              <div class="hex-inner">
+                <span class="hex-icon">3D</span>
+                <span class="hex-label">Three.js</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CONTACT SECTION
+  ══════════════════════════════════════ -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-number">04</span>
+        <h2 class="section-title">Get In <em>Touch</em></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <p class="contact-intro reveal">
+        Have a project idea, collaboration proposal, or just want to say hello?
+        My inbox is always open. I'll get back to you within 24 hours!
+      </p>
+
+      <div class="contact-layout">
+
+        <!-- Contact Info -->
+        <div class="contact-info reveal-left">
+          <div class="contact-card">
+            <h3>Let's Build Something Together</h3>
+            <p>Currently open to internships, collaborative projects, and learning opportunities.</p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="ci-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="ci-label">Email</span>
+                  <a href="mailto:girisishir4@gmail.com" class="ci-value">girisishir4@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="ci-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="ci-label">Location</span>
+                  <span class="ci-value">Pokhara, Nepal 🇳🇵</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links">
+              <a href="https://github.com/" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form reveal-right" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <div class="input-wrap">
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
+              <div class="input-line"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <div class="input-wrap">
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+              <div class="input-line"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <div class="input-wrap">
+              <input type="text" id="subject" name="subject" placeholder="Project collaboration" />
+              <div class="input-line"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <div class="input-wrap">
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your idea..." required></textarea>
+              <div class="input-line"></div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-icon">→</span>
+            <span class="btn-glow"></span>
+          </button>
+          <div class="form-feedback" id="formFeedback"></div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="logo-bracket">[</span>SG<span class="logo-bracket">]</span>
+        </div>
+        <p class="footer-copy">
+          © 2025 <strong>Sishir Giri</strong>. Crafted with passion from Kathmandu, Nepal.
+        </p>
+        <div class="footer-links">
+          <a href="#hero">Top</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <span class="footer-status">
+          <span class="pulse-dot"></span> Available for work
+        </span>
+        <span class="footer-tech">Built with Three.js + Vanilla JS</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</body>
+</html>
